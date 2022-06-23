@@ -1,0 +1,16 @@
+<div class="container">
+    <h2 style="margin-bottom: 30px;">{{student.name}} {{student.surname}}</h2>
+    <p>Month: <strong>{{student.month}}</strong></p>
+    <p>Group: <strong>{{student.group}}</strong></p>
+    <p>Score: <strong>{{student.score}}</strong></p>
+    <hr>
+    <form action="/api/scoreup" method="post">
+        <div style="display: flex; align-items: center;">
+            <input type="hidden" value="{{student._id}}" name="id">
+            <input style="width: 70px;
+            margin-right: 10px;" name="score" type="number" class="form-control" required>
+            <button type="submit" class="btn btn-primary">Add score</button>
+        </div>
+    </form>
+    <a class="btn btn-danger mt-5" href="/api/delete/{{student._id}}">Delete</a>
+</div>
