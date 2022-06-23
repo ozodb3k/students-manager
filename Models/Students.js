@@ -17,7 +17,7 @@ const studentsSchema = new Schema({
         required: true
     },
     score: {
-        type: String,
+        type: Number,
         default: 0
     }
 });
